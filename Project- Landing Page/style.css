@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   color: #f9faf8;
-  background-color: #151515;
+  background: linear-gradient(-235deg, #151515, #142545);
 }
 
 header {
@@ -18,7 +18,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0px;
-  height: 80px;
+  height: 45px;
 }
 
 ul {
@@ -31,33 +31,145 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  text-align: center;
+  text-shadow: 1px 1px #444;
+  transition: background 0.3s ease;
+}
+
+.grey-button {
+  background: linear-gradient(to bottom, #cdced9, #b7b8c6);
+}
+
+.grey-button:hover {
+  background: linear-gradient(to bottom, #b7b8c6, #cdced9);
+}
+
+.yellow-button {
+  background: linear-gradient(to bottom, #daa520 0%, #d59422 100%);
+}
+
+.yellow-button:hover {
+  background: linear-gradient(to bottom, #d59400 0%, #daa520 100%);
+}
+
 /* makes the container flex with set height for displaying content */
 .content-container {
   height: 500px;
   display: flex;
   flex: content;
-  justify-content: center;
-}
-
-.hero-content {
 }
 
 /* Web info and image in the hero-content container */
-.website-info,
+.hero-info,
 .hero-image {
   display: flex;
   flex: 1;
+  flex-direction: column;
+}
+
+.hero-image {
   justify-content: center;
   align-items: center;
 }
 
+.hero-info-title {
+  font-size: 34px;
+  padding-top: 10%;
+  padding-left: 10%;
+  color: #daa520;
+}
+
+.hero-info-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding-top: 2%;
+  padding-left: 10%;
+  padding-right: 40%;
+}
+
+.hero-info-body > .left,
+.right {
+  flex: 1;
+}
+
+.hero-info-body > .right {
+  padding-top: 10%;
+}
+
+/* image used in the first container */
 .hero-image img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.info-content {
+/* info about the website */
+.info-container {
   background-color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  color: black;
+  gap: 36px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* second container with padding and alignment for the boxes*/
+.info-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  padding-top: 100px;
+  color: black;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 36px;
+}
+
+.info-caption {
+  align-items: center;
+  text-align: center;
+  font-size: calc(1vw + 0.5vh);
+  max-width: 100px;
+}
+
+/* container holding both the image and the text under */
+.info-box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+.info-box {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #151515, #142545) border-box;
+  border-radius: 135px;
+  border: 2.5px solid transparent;
+  opacity: 0.92;
+  margin: 0px;
+
+  width: 100%;
+  height: 100px;
+}
+
+.my-icons {
+  font-size: 5vw !important;
+  padding: 20px;
+  color: #daa520;
 }
 
 .quote-container {
@@ -66,13 +178,13 @@ li {
   justify-content: center;
   align-items: center;
   background-color: #cdced9;
-  padding-left: 350px;
-  padding-right: 350px;
+  height: 300px;
 }
 
 .quote-content {
   color: #424242;
-  font-size: 32px;
+  font-size: calc(vw + 1 / 2vh);
+  max-width: 90%;
 }
 
 .quote-author {
@@ -92,16 +204,28 @@ li {
 /* content goes into the container */
 .action-content {
   flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #DAA520;
   border-radius: 18px;
-  background: #E5D6B0;
+  background: linear-gradient(to bottom, #d59400 0%, #daa520 100%);
   opacity: 0.92;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.action-left {
+  flex: 2;
+  align-items: center;
+  text-align: center;
+}
+
+.action-right {
+  flex: 1;
+  align-items: center;
+  text-align: center;
 }
 
 .header-links {
